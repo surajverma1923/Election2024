@@ -66,7 +66,7 @@ print(state_abbreviations_list)
 
 # PART 2: GET NUMBER OF CONSTITUENCIES IN EACH STATE (used for navigating URLs)
 for state_code in state_abbreviations_list:
-    state_url = 'http://results.eci.gov.in/pc/en/constituencywise/Constituencywise'+state_code+'1.htm?ac=1'
+    state_url ='https://results.eci.gov.in/PcResultGenJune2024/partywisewinresultState-369.htm'
     driver.get(state_url)
     state_soup = BeautifulSoup(driver.page_source, 'lxml')
     constituency_values = state_soup.find('table', class_='tabc').findAll('tr')[10].td.findAll('option')[38:]
